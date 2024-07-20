@@ -1,0 +1,252 @@
+body {
+    font-family: 'Trirong', sans-serif;
+    background-color: #bdc3c7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #2c3e50;
+}
+
+header p {
+    color: #7f8c8d;
+    font-size: 1.2em;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.editor-options, .card-preview {
+    flex: 1;
+    width: 48%;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.editor-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.editor-options h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.editor-options label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.editor-options input[type="color"],
+.editor-options input[type="file"] {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.select-box {
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#font-size-slider {
+    margin-top: 10px;
+    background: #d0e1ff;
+    border-radius: 5px;
+    height: 6px;
+    width: 100%;
+    cursor: pointer;
+}
+
+#font-size-slider::-webkit-slider-thumb,
+#font-size-slider::-moz-range-thumb {
+    background: #3498db;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#font-size-slider:focus {
+    outline: none;
+}
+
+#font-size-value {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #3498db;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+.btn-success {
+    background-color: #27ae60;
+}
+
+.btn-success:hover {
+    background-color: #2ecc71;
+}
+
+.btn-secondary {
+    background-color: #95a5a6;
+}
+
+.btn-secondary:hover {
+    background-color: #7f8c8d;
+}
+
+.btn-light {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+}
+
+.btn-light:hover {
+    background-color: #bdc3c7;
+}
+
+.text-style-buttons,
+.undo-redo-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.card-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 100%;
+    max-width: 400px;
+    height: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background: #bdc3c7;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+    position: relative;
+    height: 100%;
+}
+
+.card-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.draggable {
+    position: absolute;
+    cursor: move;
+}
+
+.draggable textarea {
+    background: transparent;
+    color: inherit;
+    border: none;
+    box-shadow: none;
+    resize: none;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .editor-options, .card-preview {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}

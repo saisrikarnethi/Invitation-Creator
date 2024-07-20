@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation Card Creator</title>
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Wedding Invitation Card Creator</h1>
+            <p>Create your perfect wedding invitation card</p>
+        </header>
+        <main>
+            <aside class="editor-options">
+                <h2>Card Customization</h2>
+                <label for="image-upload">Upload Your Image:</label>
+                <input type="file" id="image-upload" accept="image/*">
+
+                <div class="button-group">
+                    <button id="add-text-btn" class="btn btn-primary">Add Text</button>
+                    <button id="remove-text-btn" class="btn btn-danger">Remove Text</button>
+                </div>
+
+                <label for="bg-color-picker">Background Color:</label>
+                <input type="color" id="bg-color-picker" value="#ffffff">
+
+                <label for="font-select">Font Style:</label>
+                <select id="font-select" class="select-box">
+                    <option value="Arial" selected>Arial</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Trebuchet MS">Trebuchet MS</option>
+                    <option value="Dancing Script">Dancing Script</option>
+                    <option value="Lora">Lora</option>
+                    <option value="Playfair Display">Playfair Display</option>
+                    <option value="Raleway">Raleway</option>
+                    <option value="Roboto Slab">Roboto Slab</option>
+                    <option value="Merriweather">Merriweather</option>
+                    <option value="Pacifico">Pacifico</option>
+                    <option value="Poppins">Poppins</option>
+                    <option value="Quicksand">Quicksand</option>
+                    <option value="Great Vibes">Great Vibes</option>
+                </select>
+
+                <label for="font-size-select">Font Size:</label>
+                <select id="font-size-select" class="select-box">
+                    <option value="24px" selected>24px</option>
+                    <option value="30px">30px</option>
+                    <option value="36px">36px</option>
+                    <option value="42px">42px</option>
+                    <option value="48px">48px</option>
+                </select>
+
+                <label for="text-color-picker">Text Color:</label>
+                <input type="color" id="text-color-picker" value="#000000">
+
+                <label for="text-align-select">Text Alignment:</label>
+                <select id="text-align-select" class="select-box">
+                    <option value="left" selected>Left</option>
+                    <option value="center">Center</option>
+                    <option value="right">Right</option>
+                </select>
+
+                <label for="font-size-slider">Font Size:</label>
+                <input type="range" id="font-size-slider" min="12" max="72" value="24" step="1">
+                <span id="font-size-value">24px</span>
+
+                <div class="text-style-buttons">
+                    <button id="bold-btn" class="btn btn-secondary"><strong>B</strong></button>
+                    <button id="italic-btn" class="btn btn-secondary"><i>I</i></button>
+                    <button id="underline-btn" class="btn btn-secondary"><u>U</u></button>
+                </div>
+
+                <div class="undo-redo-buttons">
+                    <button id="undo-btn" class="btn btn-light">Undo</button>
+                    <button id="redo-btn" class="btn btn-light">Redo</button>
+                </div>
+
+                <button id="download-btn" class="btn btn-success">Download Card</button>
+            </aside>
+
+            <div class="card-preview">
+                <div id="card" class="card">
+                    <div class="card-content">
+                        <img id="card-image" src="https://via.placeholder.com/400x600.png?text=Wedding+Image" alt="Wedding Image">
+                        <div id="text-overlay" class="text-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>Created with ❤ by Nethi Sai Srikar &copy; 2024</p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
